@@ -59,3 +59,8 @@ LIBS += -L/usr/local/lib/ \
 INCLUDEPATH += /usr/local/include
 DEPENDPATH += /usr/local/include
 }
+
+unix:CONFIG(release, debug|release){
+CONFIG += link_pkgconfig
+PKGCONFIG += opencv
+}
